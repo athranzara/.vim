@@ -43,7 +43,7 @@ Plugin 'jcf/vim-latex'
 
 "Plugin 'lervag/vimtex'
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 
 
