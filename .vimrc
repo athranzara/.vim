@@ -1,6 +1,3 @@
-
-
-
 """""""""""""""""""""""""""
 "   Vundle Configuration  "
 """""""""""""""""""""""""""
@@ -15,8 +12,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-
 
 
 "" The following are examples of different formats supported.
@@ -64,15 +59,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""
-"   Vundle Configuration  "
+" End of Vundle Configuration  "
 """""""""""""""""""""""""""
-
-
-
-
-
-
-
 
 
 " Turn on line numbering. Turn it off with "set nonu" 
@@ -111,6 +99,10 @@ hi SpellBad cterm=underline
 :retab
 :set expandtab
 
+" Configure the toggle mode for terminal paste
+" press F10 to switch to terminal paste mode without indentation
+" press again to switch back to indentation mode
+set pastetoggle=<F10>
 
 
 " vim-latex related configuration
