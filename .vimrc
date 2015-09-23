@@ -34,7 +34,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'scrooloose/nerdcommenter'
 
-Plugin 'jcf/vim-latex'
+Plugin 'vim-latex/vim-latex'
 
 "Plugin 'lervag/vimtex'
 
