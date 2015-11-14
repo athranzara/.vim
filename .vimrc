@@ -94,10 +94,11 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 
 " configure tab character to be space, and convert all tab to space
-:set tabstop=4
-:set shiftwidth=4
-:retab
-:set expandtab
+set tabstop=4
+set shiftwidth=4
+retab
+set softtabstop=4
+set expandtab
 
 " Configure the toggle mode for terminal paste
 " press F10 to switch to terminal paste mode without indentation
@@ -112,7 +113,7 @@ set pastetoggle=<F10>
 set grepprg=grep\ -nH\ $*
 " this is mostly a matter of taste. but LaTeX looks good with just a bit
 " of indentation.
-set sw=2
+set sw=4
 " TIP: if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
