@@ -105,6 +105,10 @@ set expandtab
 " press again to switch back to indentation mode
 set pastetoggle=<F10>
 
+" Automatically wrap left and right
+" pressing left/right cursor keys, vim will move to the previous/next line
+" after reaching first/last character int the line.
+set whichwrap+=<,>,h,l,[,]
 
 " vim-latex related configuration
 " IMPORTANT: grep will sometimes skip displaying the file name if you
