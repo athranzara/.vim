@@ -110,6 +110,10 @@ set pastetoggle=<F10>
 " after reaching first/last character int the line.
 set whichwrap+=<,>,h,l,[,]
 
+
+" set smartcase, auto determine case sensitivity
+set smartcase
+
 " vim-latex related configuration
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
