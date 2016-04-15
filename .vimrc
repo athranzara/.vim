@@ -74,6 +74,10 @@ set title
 " Turn on line numbering. Turn it off with "set nonu" 
 set number
 
+" This is allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
+set hidden
+
 " Set syntax on
 syntax on
 
