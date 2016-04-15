@@ -4,3 +4,9 @@ s
 MGDM
 datacenter
 NRZ
+AWGN
+BCS
+ECC
+SNR
+convolutional
+LDPC
