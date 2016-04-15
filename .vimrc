@@ -36,6 +36,12 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'vim-latex/vim-latex'
 
+Plugin 'xuhdev/vim-latex-live-preview'
+
+Plugin 'jlanzarotta/bufexplorer'
+
+let g:livepreview_previewer = 'evince'
+
 "Plugin 'lervag/vimtex'
 
 "Plugin 'Valloric/YouCompleteMe'
@@ -62,6 +68,8 @@ filetype plugin indent on    " required
 " End of Vundle Configuration  "
 """""""""""""""""""""""""""
 
+" Show title
+set title
 
 " Turn on line numbering. Turn it off with "set nonu" 
 set number
@@ -114,6 +122,17 @@ set whichwrap+=<,>,h,l,[,]
 " set smartcase, auto determine case sensitivity
 set smartcase
 
+"Gnome terminal do not send <alt> key,
+"this fix such problem
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
+
 " vim-latex related configuration
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
@@ -126,3 +145,17 @@ set sw=4
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 set iskeyword+=:
+set winaltkeys=no
+
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf'
+
+" type <F11> in normal mode to enable
+" Vim-latex-live-preview
+nmap <F12> :LLPStartPreview<cr>
+
+
+" enable in file vim command
+set modeline
+
+
