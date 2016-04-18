@@ -42,6 +42,8 @@ Plugin 'jlanzarotta/bufexplorer'
 
 let g:livepreview_previewer = 'evince'
 
+Plugin 'vhda/verilog_systemverilog.vim'
+
 "Plugin 'lervag/vimtex'
 
 "Plugin 'Valloric/YouCompleteMe'
