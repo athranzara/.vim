@@ -46,6 +46,8 @@ Plugin 'vhda/verilog_systemverilog.vim'
 
 Plugin 'chrisbra/csv.vim'
 
+Plugin 'ervandew/supertab'
+
 "Plugin 'lervag/vimtex'
 
 "Plugin 'Valloric/YouCompleteMe'
