@@ -44,6 +44,8 @@ let g:livepreview_previewer = 'evince'
 
 Plugin 'vhda/verilog_systemverilog.vim'
 
+Plugin 'chrisbra/csv.vim'
+
 "Plugin 'lervag/vimtex'
 
 "Plugin 'Valloric/YouCompleteMe'
@@ -164,4 +166,6 @@ nmap <F12> :LLPStartPreview<cr>
 " enable in file vim command
 set modeline
 
-
+" configure j k to move inline
+nnoremap <buffer> k gk
+nnoremap <buffer> j gj
