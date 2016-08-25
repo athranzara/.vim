@@ -1,0 +1,2 @@
+# replace 4 spaces into 2 spaces
+sed -e 's/^/~/' -e ': r' -e 's/^\( *\)~    /\1  ~/' -e 't r' -e 's/~//' file
