@@ -171,3 +171,12 @@ set modeline
 " configure j k to move inline
 nnoremap <buffer> k gk
 nnoremap <buffer> j gj
+
+function! WC()
+    let filename = expand("%")
+    let cmd = "detex " . filename . " | wc -w | tr -d [:space:]"
+    let result = system(cmd)
+    echo result . " words"
+endfunction
+
+command WC call WC()
