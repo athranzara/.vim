@@ -180,3 +180,7 @@ function! WC()
 endfunction
 
 command WC call WC()
+
+" Set encoding to UTF-8 by default
+"set encoding=utf-8  " The encoding displayed.
+"set fileencoding=utf-8  " The encoding written to file.
