@@ -10,3 +10,5 @@ set modeline
 " configure j k to move inline
 nnoremap <buffer> k gk
 nnoremap <buffer> j gj
+
+set spell spelllang=en_gb

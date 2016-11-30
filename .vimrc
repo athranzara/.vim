@@ -160,7 +160,7 @@ set winaltkeys=no
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf'
 
-" type <F11> in normal mode to enable
+" type <F12> in normal mode to enable
 " Vim-latex-live-preview
 nmap <F12> :LLPStartPreview<cr>
 
@@ -182,5 +182,9 @@ endfunction
 command WC call WC()
 
 " Set encoding to UTF-8 by default
-"set encoding=utf-8  " The encoding displayed.
-"set fileencoding=utf-8  " The encoding written to file.
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
+
+
+" Let vim recognize empty .tex file is a tex file rather than plaintex
+let g:tex_flavor='latex'
