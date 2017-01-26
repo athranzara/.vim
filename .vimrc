@@ -48,6 +48,8 @@ Plugin 'chrisbra/csv.vim'
 
 Plugin 'ervandew/supertab'
 
+Plugin 'vim-scripts/Conque-Shell'
+
 "Plugin 'lervag/vimtex'
 
 "Plugin 'Valloric/YouCompleteMe'
