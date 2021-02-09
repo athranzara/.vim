@@ -1,6 +1,6 @@
-setlocal tabstop=2
-setlocal shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=-1 " backspace function as -4
 retab
-setlocal softtabstop=2
-setlocal expandtab
 let g:SuperTabDefaultCompletionType = 'context'
