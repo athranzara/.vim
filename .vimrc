@@ -11,7 +11,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+  Plugin 'VundleVim/Vundle.vim'
 
 
 "" The following are examples of different formats supported.
@@ -30,31 +30,16 @@ Plugin 'VundleVim/Vundle.vim'
 "" Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 
-"Plugin 'scrooloose/nerdtree'
-
-"Plugin 'scrooloose/nerdcommenter'
-
-"Plugin 'vim-latex/vim-latex'
-
-"Plugin 'xuhdev/vim-latex-live-preview'
-
-"Plugin 'jlanzarotta/bufexplorer'
-
-"let g:livepreview_previewer = 'evince'
-
-"Plugin 'vhda/verilog_systemverilog.vim'
-
-"Plugin 'chrisbra/csv.vim'
-
-"Plugin 'ervandew/supertab'
-
-"Plugin 'vim-scripts/Conque-Shell'
-
-"Plugin 'lervag/vimtex'
-
-"Plugin 'Valloric/YouCompleteMe'
-
-
+  Plugin 'tomasr/molokai'                   " molokai vim主题
+  Plugin 'vim-airline/vim-airline'          " airline状态栏美化
+  Plugin 'vim-airline/vim-airline-themes'   " 状态栏主题包
+  Plugin 'nathanaelkane/vim-indent-guides'  " 代码块竖线
+  Plugin 'scrooloose/nerdtree'              " 加入NERDTree
+  Plugin 'scrooloose/nerdcommenter'         " 代码注释
+  Plugin 'godlygeek/tabular'                " 按符号自动对齐如: Tab \= , : Tab \|
+  Plugin 'majutsushi/tagbar'                " tagbar显示文件大纲
+  Plugin 'vhda/verilog_systemverilog.vim'   " Vim Syntax Plugin for Verilog and SystemVerilog
+  Plugin 'ervandew/supertab'                " tab autocomplete
 
 
 " All of your Plugins must be added before the following line
@@ -96,7 +81,6 @@ set lbr
 " Change colorscheme from default to delek
 colorscheme delek
 
-
 " map switch between tabs
 map <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
@@ -109,7 +93,7 @@ hi SpellBad cterm=underline
 " configure tab character to be space, and convert all tab to space
 set tabstop=4
 set shiftwidth=4
-retab
+"retab
 set softtabstop=4
 set expandtab
 
@@ -178,6 +162,12 @@ set fileencoding=utf-8  " The encoding written to file.
 " Let vim recognize empty .tex file is a tex file rather than plaintex
 "let g:tex_flavor='latex'
 
+" 定义前缀键的前缀,即<Leader>
+let mapleader=";"
+" 映射esc为jk
+inoremap jk <esc>
+
+
 " 设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
 " 设置快捷键将系统剪贴板内容粘贴至 vim
@@ -241,7 +231,7 @@ set softtabstop=2
 " 自动缩进代码
 set autoindent
 " 开启智能对齐
-set smartindent
+"set smartindent
 " 缩进代码量
 set shiftwidth=2
 " 删除空格数
@@ -255,5 +245,43 @@ autocmd FileType python,shell,bash set ts=4
 autocmd FileType python,shell,bash set shiftwidth=4
 autocmd FileType python,shell,bash set softtabstop=4
 
-" 对于markdown文件需要进行换行方便书写
-autocmd FileType markdown set wrap
+" 配色方案
+let g:molokai_original=1
+let g:rehash256=1
+colorscheme molokai
+" 设置状态栏主题风格
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
+
+" NERDTree config
+map <leader>f :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree() == "primary") | q | endif
+
+" 默认开启NERDTree
+"autocmd vimenter * NERDTree
+" 隐藏不需要显示的文件，如pyc
+let NERDTreeIgnore=['\.pyc$']
+
+" Vim Verilog 设置
+nnoremap <leader>i :VerilogFollowInstance<CR>
+nnoremap <leader>I :VerilogFollowPort<CR>
+nnoremap <leader>u :VerilogGotoInstanceStart<CR>
+runtime macros/matchit.vim
+let g:SuperTabDefaultCompletionType = 'context'
+
+" 映射切换buffer的键位
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+" 映射<leader>num到num buffer
+map <leader>1 :b 1<CR>
+map <leader>2 :b 2<CR>
+map <leader>3 :b 3<CR>
+map <leader>4 :b 4<CR>
+map <leader>5 :b 5<CR>
+map <leader>6 :b 6<CR>
+map <leader>7 :b 7<CR>
+map <leader>8 :b 8<CR>
+map <leader>9 :b 9<CR>
